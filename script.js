@@ -11,6 +11,7 @@ function enviarMensagem() {
   const payload = {
     phone: numero,
     message: mensagem,
+    footer: "Unlock Apple",
     buttons: [
       {
         url: linkBotao,
@@ -19,7 +20,7 @@ function enviarMensagem() {
     ]
   };
 
-  fetch(`https://api.z-api.io/instances/${instanceId}/token/${instanceToken}/send-button-message`, {
+  fetch(`https://api.z-api.io/instances/${instanceId}/token/${instanceToken}/send-link-button-message`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
